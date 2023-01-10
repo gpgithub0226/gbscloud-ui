@@ -12,48 +12,14 @@ handlers:
 # To enhance security, all http requests are redirected to their equivalent https addresses (secure: always).
 
 # Assets are retrieved directly from their parent folder.
-- url: /assets
-  static_dir: dist/GBSCLOUD-UI/assetsh
-  secure: always
-
-# Static files located in the root folder are retrieved directly from there, but their suffixes need to be
-# mapped individually in order to avoid them from being hit by the most general (catch-all) rule.
-- url: /(.*\.css)
-  static_files: dist/GBSCLOUD-UI/\1
-  upload: dist/GBSCLOUD-UI/(.*\.css)
-  secure: always
-
-- url: /(.*\.html)
-  static_files: dist/GBSCLOUD-UI/\1
-  upload: dist/GBSCLOUD-UI/(.*\.html)
-  secure: always
-
-- url: /(.*\.ico)
-  static_files: dist/GBSCLOUD-UI/\1
-  upload: dist/GBSCLOUD-UI/(.*\.ico)
-  secure: always
-
-- url: /(.*\.js)
-  static_files: dist/GBSCLOUD-UI/\1
-  upload: dist/GBSCLOUD-UI/(.*\.js)
-  secure: always
-
-- url: /(.*\.txt)
-  static_files: dist/GBSCLOUD-UI/\1
-  upload: dist/GBSCLOUD-UI/(.*\.txt)
-  secure: always
-
-# Site root.
 - url: /
-  static_files: dist/GBSCLOUD-UI/index.html
-  upload: dist/GBSCLOUD-UI/index.html
-  secure: always
+  static_dir: dist/gbscloud-ui/index.html
+  upload: dist/gbscloud-ui/index.html
+- url: /
+  static_dir:dist/gbscloud-ui
 
-# Catch-all rule, responsible from handling Angular application routes (deeplinks).
-- url: /.*
-  static_files: dist/GBSCLOUD-UI/index.html
-  upload: dist/GBSCLOUD-UI/index.html
-  secure: always
+
+
 
 skip_files:
 - ^(?!dist)
