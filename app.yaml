@@ -16,10 +16,6 @@ handlers:
   static_files: dist/gbscloud-ui/index.html
   upload: dist/gbscloud-ui/index.html
 - url: /
-  static_dir:dist/gbscloud-ui
-
-
-
-
+  static_dir: dist/gbscloud-ui
 skip_files:
-- ^(?!dist)
+ - ^(?!dist)
