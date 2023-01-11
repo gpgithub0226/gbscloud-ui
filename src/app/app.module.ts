@@ -1,27 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomerComponent } from './customer/customer.component';
-import { RegistrationComponent } from './registration/registration.component';
+// import { TestComponent } from './test/test.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FormsModule } from '@angular/forms';
+import {RouterModule} from '@angular/router';
+
+import{LoginService} from './service/login.service';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent,
-    RegistrationComponent
+//     TestComponent,
+    routingComponents,
+
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    ReactiveFormsModule,
+     HttpClientModule,
+     BrowserAnimationsModule,
+
+
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
