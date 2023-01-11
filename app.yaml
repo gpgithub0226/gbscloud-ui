@@ -12,14 +12,9 @@ handlers:
 # To enhance security, all http requests are redirected to their equivalent https addresses (secure: always).
 
 # Assets are retrieved directly from their parent folder.
+  static_files: dist/front-end/index.html
+  upload: dist/front-end/index.html
 - url: /
-  static_dir: dist/gbscloud-ui/index.html
-  upload: dist/gbscloud-ui/index.html
-- url: /
-  static_dir:dist/gbscloud-ui
-
-
-
-
+  static_dir: dist/front-end
 skip_files:
-- ^(?!dist)
+ - ^(?!dist)
