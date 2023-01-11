@@ -13,10 +13,10 @@ handlers:
 
 # Assets are retrieved directly from their parent folder.
 - url: /
-  static_dir: dist/gbscloud-ui/index.html
+  static_files: dist/gbscloud-ui/index.html
   upload: dist/gbscloud-ui/index.html
 - url: /
-  static_dir:dist/gbscloud-ui
+  static_dir: dist/gbscloud-ui
 
 
 
