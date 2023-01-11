@@ -1,0 +1,14 @@
+[
+  {
+    "GST": [
+      {
+        "param": "GST_Beneficiary_State_code_Master",
+        "value": "GST Beneficiary State code Master"
+      },
+      {
+        "param": "GST_Scheme_Parameterization",
+        "value": "GST Scheme Parameterization"
+      }
+    ]
+  }
+]
